@@ -23,9 +23,15 @@ function EntreeListe(EntreeProps) {
     modal.showModal();
   };
 
+  const handleModif = () => {
+    const modal = document.getElementById("modal-modif-" + id);
+    modal.showModal();
+  }
+
   const delFromArray = () => {
     EntreeProps.delElementInArray(id);
   };
+
 
   if (EntreeProps.index % 2 == 0) {
     bgColor = "bg-white";
@@ -43,6 +49,14 @@ function EntreeListe(EntreeProps) {
         nom={nom}
         delFromArray={delFromArray}
       />
+      <ModalModif
+      key={"ModalModif-"+id}
+      id={id}
+      nom={nom}
+      date={date}
+      fini={fini}
+      editInArray={EntreeProps.editInArray}
+      />
       <div
         id={id}
         className={"flex px-20 py-2 border w-full gap-10 " + bgColor}
@@ -58,6 +72,14 @@ function EntreeListe(EntreeProps) {
           <span className={"text-right " + miseEnPageFini}>{date}</span>
         </div>
 
+        <div className="flex right-10">
+          <button
+            className="flex text-blue-700 underline hover:text-blue-300"
+            onClick={(e) => handleModif(e)}
+          >
+            Modifier
+          </button>
+          </div>
         <div className="flex right-10">
           <button
             className="flex text-red-700 underline hover:text-red-500"

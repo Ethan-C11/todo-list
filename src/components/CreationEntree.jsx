@@ -40,11 +40,10 @@ function CreationEntree({ pushElementInArray }) {
     setNom("");
   };
 
-  //<div className="bg-[#96969620] relative">
   return (
     <>
       <button
-        className="bg-blue-400 p-2 px-6 rounded-lg border h-12 w-auto hover:bg-blue-300"
+        className="bg-blue-400 text-white p-2 px-6 rounded-lg border h-12 w-auto m-auto hover:bg-blue-300"
         onClick={handleClick}
       >
         Ajouter une nouvelle tâche
@@ -53,6 +52,7 @@ function CreationEntree({ pushElementInArray }) {
         id="modal-creation"
         className="bg-slate-100 rounded-lg border border-slate-300 py-4 px-6 w-96"
       >
+        <h1 className="flex justify-center font-bold pb-3">Ajouter une tâche</h1>
         <span className="flex justify-between pb-5">
           Nom
           <input

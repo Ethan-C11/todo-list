@@ -44,6 +44,15 @@ function App() {
     setArrayTodo(ArrayTemp);
   };
 
+  const editInArray = (tache) => {
+    const id = tache.id
+    const isIdEqual = (element) => element.id === id;
+    const indexToEdit = ArrayTodo.findIndex(isIdEqual);
+    const ArrayTemp = [...ArrayTodo];
+    ArrayTemp[indexToEdit] = tache
+    setArrayTodo(ArrayTemp)
+  }
+
   return (
     <>
       <h1 className="flex justify-center text-3xl py-6 font-bold">
@@ -64,6 +73,7 @@ function App() {
             fini={entree.fini}
             delElementInArray={delElementInArray}
             changeStatus={changeStatus}
+            editInArray={editInArray}
           />
         ))}
       </div>
