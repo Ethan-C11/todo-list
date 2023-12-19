@@ -5,17 +5,18 @@ import EntreeListe from "./components/EntreeListe";
 import CreationEntree from "./components/CreationEntree";
 
 function App() {
+
+  if (localStorage.getItem("TodoList") === null) {
+    localStorage.setItem("TodoList", JSON.stringify([{ id: 0, nom: "Exemple de tâche", date: "dd/MM/yyyy", fini: false }]));
+  }
+
   const [ArrayTodo, setArrayTodo] = useState(
     JSON.parse(localStorage.getItem("TodoList"))
   );
 
-  if(JSON.parse(localStorage.getItem("TodoList")) === null )
-  {
-    setArrayTodo([])
-  }
-
   useEffect(() => {
     localStorage.setItem("TodoList", JSON.stringify(ArrayTodo));
+    console.log("useEffect");
   }, [ArrayTodo]);
 
   const pushElementInArray = (element) => {
@@ -53,10 +54,11 @@ function App() {
       </div>
 
       <div className="">
-        {ArrayTodo.map((entree) => (
+        {ArrayTodo.map((entree, index) => (
           <EntreeListe
             key={entree.id}
             id={entree.id}
+            index={index}
             nom={entree.nom}
             date={entree.date}
             fini={entree.fini}

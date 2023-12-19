@@ -27,7 +27,7 @@ function EntreeListe(EntreeProps) {
     EntreeProps.delElementInArray(id);
   };
 
-  if (id % 2 == 0) {
+  if (EntreeProps.index % 2 == 0) {
     bgColor = "bg-white";
   } else {
     bgColor = "bg-gray-100";
