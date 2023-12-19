@@ -44,7 +44,7 @@ function CreationEntree({ pushElementInArray }) {
   return (
     <>
       <button
-        className="bg-blue-400 p-2 px-6 rounded-lg border h-12 w-auto"
+        className="bg-blue-400 p-2 px-6 rounded-lg border h-12 w-auto hover:bg-blue-300"
         onClick={handleClick}
       >
         Ajouter une nouvelle tâche

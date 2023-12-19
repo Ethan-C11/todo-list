@@ -9,6 +9,11 @@ function App() {
     JSON.parse(localStorage.getItem("TodoList"))
   );
 
+  if(JSON.parse(localStorage.getItem("TodoList")) === null )
+  {
+    setArrayTodo([])
+  }
+
   useEffect(() => {
     localStorage.setItem("TodoList", JSON.stringify(ArrayTodo));
   }, [ArrayTodo]);

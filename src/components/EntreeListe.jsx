@@ -60,7 +60,7 @@ function EntreeListe(EntreeProps) {
 
         <div className="flex right-10">
           <button
-            className="flex text-red-700 underline"
+            className="flex text-red-700 underline hover:text-red-500"
             onClick={(e) => handleSupp(e)}
           >
             Supprimer
