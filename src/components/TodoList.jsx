@@ -21,6 +21,7 @@ function TodoList() {
 
   useEffect(() => {
     localStorage.setItem("TodoList", JSON.stringify(ArrayTodo));
+    handleSearch("")
   }, [ArrayTodo]);
 
   const pushElementInArray = (element) => {
@@ -62,7 +63,7 @@ function TodoList() {
       setArrayFilter(ArrayTodo);
     } else {
       const RechercheArray = ArrayTodo.filter((taches) =>
-        taches.nom.includes(value)
+        (taches.nom.toLowerCase()).includes(value.toLowerCase())
       );
       setArrayFilter(RechercheArray);
     }
