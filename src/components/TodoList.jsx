@@ -18,10 +18,11 @@ function TodoList() {
     JSON.parse(localStorage.getItem("TodoList"))
   );
   const [ArrayFilter, setArrayFilter] = useState(ArrayTodo);
+  const [SearchFilter, setSearchFilter] = useState("")
 
   useEffect(() => {
     localStorage.setItem("TodoList", JSON.stringify(ArrayTodo));
-    handleSearch("")
+    handleSearch(SearchFilter)
   }, [ArrayTodo]);
 
   const pushElementInArray = (element) => {
@@ -59,6 +60,7 @@ function TodoList() {
   };
 
   const handleSearch = (value) => {
+    setSearchFilter(value)
     if (value === null || value === undefined || value === "") {
       setArrayFilter(ArrayTodo);
     } else {
