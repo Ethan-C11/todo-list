@@ -6,25 +6,25 @@ function CreationEntree({ pushElementInArray }) {
   let [date, setDate] = useState(new Date().toLocaleDateString("fr-FR"));
 
   const handleChangeDate = (e) => {
-    setDate(e.target.value);
+    setDate(e.target.value); //gestion du changement de la date
   };
 
   const handleChangeNom = (e) => {
-    setNom(e.target.value);
+    setNom(e.target.value); //gestion du changement du nom de la tache
   };
 
   const handleClick = () => {
     const div = document.getElementById("modal-creation");
-    div.showModal();
+    div.showModal(); // affichage de la modal de création de tache
   };
 
   const handleCancel = () => {
     document.getElementById("modal-creation").close();
     setDate(new Date().toLocaleDateString("fr-FR"));
-    setNom("");
+    setNom(""); // gestion de l'annulation de création de tache
   };
 
-  const handleAdd = () => {
+  const handleAdd = () => { // gestion de la création de tache
     if (nom === undefined || nom === "") {
       alert("Veuillez renseigner un nom pour votre tâche");
       return;

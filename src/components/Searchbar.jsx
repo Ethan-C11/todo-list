@@ -10,7 +10,7 @@ function Searchbar(Props) {
 
   const handleSearchLocal = (e) => {
     e.preventDefault();
-    Props.handleSearch(value);
+    Props.handleSearch(value); // appel de la fonction du parent
   };
 
   return (
