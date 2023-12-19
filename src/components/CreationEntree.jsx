@@ -61,6 +61,7 @@ function CreationEntree({ pushElementInArray }) {
             placeholder="Tâche a effectuer"
             value={nom}
             onChange={(e) => handleChangeNom(e)}
+            maxLength={59}
           />
         </span>
         <span className="flex justify-between pb-5">

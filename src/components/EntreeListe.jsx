@@ -68,7 +68,7 @@ function EntreeListe(EntreeProps) {
         />
 
         <div className="flex gap-10 w-full">
-          <span className={"text-left w-full " + miseEnPageFini}>{nom}</span>
+          <span className={"text-left truncate w-full " + miseEnPageFini}>{nom}</span>
           <span className={"text-right " + miseEnPageFini}>{date}</span>
         </div>
 
