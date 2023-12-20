@@ -25,14 +25,14 @@ function ModalSupp(Props) {
       <div className="flex justify-end pt-5 gap-3">
         <button
           id="n"
-          className="bg-gray-400 p-2 px-6 rounded-lg border w-32"
+          className="bg-gray-300 p-2 px-6 rounded-lg border w-32 hover:bg-gray-200"
           onClick={handleCancel}
         >
           Non
         </button>
         <button
           id="y"
-          className="bg-red-400 p-2 px-6 rounded-lg border w-32"
+          className="bg-red-400 p-2 px-6 rounded-lg border w-32 hover:bg-red-300"
           onClick={(e) => handleSupp(e)}
         >
           Oui

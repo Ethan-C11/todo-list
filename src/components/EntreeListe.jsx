@@ -34,9 +34,9 @@ function EntreeListe(EntreeProps) {
 
 
   if (EntreeProps.index % 2 == 0) {
-    bgColor = "bg-white";
+    bgColor = "bg-white/[.6] backdrop-blur-lg";
   } else {
-    bgColor = "bg-gray-100";
+    bgColor = "bg-white/[.75] backdrop-blur-lg";
   }
 
   if (fini === true) miseEnPageFini = "line-through";
@@ -74,7 +74,7 @@ function EntreeListe(EntreeProps) {
 
         <div className="flex right-10">
           <button
-            className="flex text-blue-700 underline hover:text-blue-300"
+            className="flex text-white px-3 rounded-md border border-gray-500 bg-blue-500 hover:bg-blue-400"
             onClick={(e) => handleModif(e)}
           >
             Modifier

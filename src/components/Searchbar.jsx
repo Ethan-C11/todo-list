@@ -14,21 +14,23 @@ function Searchbar(Props) {
   };
 
   return (
-    <form
-      className="flex justify-center pb-5 gap-1"
-      onSubmit={(e) => handleSearchLocal(e)}
-    >
-      <input
-        type="text"
-        placeholder="Recherche"
-        value={value}
-        onChange={(e) => handleChange(e)}
-        className="border border-gray-300 rounded-md w-1/2 h-7 justify-center"
-      />
-      <button className="bg-gray-300 px-1 rounded-md border border-gray-400 hover:bg-gray-200">
-        <img src="./src/assets/searchIcon.svg" alt="Recherche" />
-      </button>
-    </form>
+    <div className="flex pb-5 justify-center ">
+      <form
+        className="flex justify-center px-5 py-5 gap-1 bg-white/[.5] w-1/2 rounded-lg backdrop-blur-lg border border-gray-800"
+        onSubmit={(e) => handleSearchLocal(e)}
+      >
+        <input
+          type="text"
+          placeholder="Recherche"
+          value={value}
+          onChange={(e) => handleChange(e)}
+          className="border border-gray-300 rounded-md w-full h-7 justify-center px-2 ml-5"
+        />
+        <button className="bg-gray-300 px-1 mr-5 rounded-md border border-gray-400 hover:bg-gray-200">
+          <img src="./src/assets/searchIcon.svg" alt="Recherche" />
+        </button>
+      </form>
+    </div>
   );
 }
 

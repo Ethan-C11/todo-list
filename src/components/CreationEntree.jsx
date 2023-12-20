@@ -43,7 +43,7 @@ function CreationEntree({ pushElementInArray }) {
   return (
     <>
       <button
-        className="bg-blue-400 text-white p-2 px-6 rounded-lg border h-12 w-auto m-auto hover:bg-blue-300"
+        className="bg-blue-600 text-white p-2 px-6 rounded-lg border h-12 w-auto m-auto border-gray-600 hover:bg-blue-500"
         onClick={handleClick}
       >
         Ajouter une nouvelle tâche
@@ -76,13 +76,13 @@ function CreationEntree({ pushElementInArray }) {
         </span>
         <div className="flex justify-between">
           <button
-            className="bg-gray-300 p-2 px-6 rounded-lg border w-32"
+            className="bg-gray-300 p-2 px-6 rounded-lg border w-32 hover:bg-gray-200"
             onClick={handleCancel}
           >
             Annuler
           </button>
           <button
-            className="bg-blue-400 p-2 px-6 rounded-lg border w-32"
+            className="bg-blue-600 p-2 px-6 rounded-lg border w-32 text-white hover:bg-blue-400"
             onClick={handleAdd}
           >
             Ajouter

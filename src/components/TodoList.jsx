@@ -73,7 +73,7 @@ function TodoList() {
 
   return (
     <>
-      <h1 className="flex justify-center text-3xl py-6 font-bold">
+      <h1 className="flex justify-center text-3xl py-6 font-bold text-white">
         To-Do List
       </h1>
       <div className="flex px-20 pb-6 ">

@@ -66,13 +66,13 @@ function ModalModif(Props) {
         </span>
         <div className="flex justify-between">
           <button
-            className="bg-gray-300 p-2 px-6 rounded-lg border w-32"
+            className="bg-gray-300 p-2 px-6 rounded-lg border w-32 hover:bg-gray-200"
             onClick={handleCancel}
           >
             Annuler
           </button>
           <button
-            className="bg-blue-400 p-2 px-6 rounded-lg border w-32"
+            className="bg-blue-600 p-2 px-6 rounded-lg border w-32 text-white hover:bg-blue-400"
             onClick={handleEdit}
           >
             Modifier
