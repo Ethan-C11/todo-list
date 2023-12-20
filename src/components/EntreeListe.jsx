@@ -42,7 +42,7 @@ function EntreeListe(EntreeProps) {
   if (fini === true) miseEnPageFini = "line-through";
 
   return (
-    <>
+    <div>
       <ModalSupp
         key={"ModalSupp-" + id}
         id={id}
@@ -89,7 +89,7 @@ function EntreeListe(EntreeProps) {
           </button>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
