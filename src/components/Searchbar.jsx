@@ -16,7 +16,7 @@ function Searchbar(Props) {
   return (
     <div className="flex pb-5 justify-center ">
       <form
-        className="flex justify-center px-5 py-5 gap-1 bg-white/[.5] w-1/2 rounded-lg backdrop-blur-lg border border-gray-800"
+        className="flex justify-center px-5 py-5 gap-1 bg-white/[.5] w-1/2 rounded-lg backdrop-blur-lg border border-gray-400"
         onSubmit={(e) => handleSearchLocal(e)}
       >
         <input
