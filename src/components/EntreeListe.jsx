@@ -34,9 +34,9 @@ function EntreeListe(EntreeProps) {
 
 
   if (EntreeProps.index % 2 == 0) {
-    bgColor = "bg-white/[.5] backdrop-blur-lg";
+    bgColor = "bg-white/[.4] backdrop-blur-lg";
   } else {
-    bgColor = "bg-white/[.7] backdrop-blur-lg";
+    bgColor = "bg-white/[.6] backdrop-blur-lg";
   }
 
   if (fini === true) miseEnPageFini = "line-through";
@@ -59,7 +59,7 @@ function EntreeListe(EntreeProps) {
       />
       <div
         id={id}
-        className={"flex px-20 py-2 border w-full gap-10 " + bgColor}
+        className={"flex px-20 py-2 border border-gray-500 w-full gap-10 " + bgColor}
       >
         <input
           type="checkbox"
@@ -68,7 +68,7 @@ function EntreeListe(EntreeProps) {
         />
 
         <div className="flex gap-10 w-full">
-          <span className={"text-left truncate w-full " + miseEnPageFini}>{nom}</span>
+          <span className={"text-left truncate w-full font-medium " + miseEnPageFini}>{nom}</span>
           <span className={"text-right " + miseEnPageFini}>{date}</span>
         </div>
 
