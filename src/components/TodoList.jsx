@@ -71,18 +71,12 @@ function TodoList() {
     }
   };
 
-  return (
-    <>
-      <h1 className="flex justify-center text-3xl py-6 font-bold text-white">
-        To-Do List
-      </h1>
-      <div className="flex px-20 pb-6 ">
-        <CreationEntree pushElementInArray={pushElementInArray} />
-      </div>
-      <div>
-        <Searchbar handleSearch={handleSearch} />
-      </div>
+  let returnList = <div></div>;
 
+  if (ArrayFilter.length === 0) {
+    returnList = <div className="text-white font-medium text-center text-3xl p-5"> Aucune tâche n'a été trouvée </div>;
+  } else {
+    returnList = (
       <div className="">
         {ArrayFilter.map((entree, index) => (
           <EntreeListe
@@ -98,6 +92,22 @@ function TodoList() {
           />
         ))}
       </div>
+    );
+  }
+
+  return (
+    <>
+      <h1 className="flex justify-center text-3xl py-6 font-bold text-white">
+        To-Do List
+      </h1>
+      <div className="flex px-20 pb-6 ">
+        <CreationEntree pushElementInArray={pushElementInArray} />
+      </div>
+      <div>
+        <Searchbar handleSearch={handleSearch} />
+      </div>
+
+      {returnList}
     </>
   );
 }
