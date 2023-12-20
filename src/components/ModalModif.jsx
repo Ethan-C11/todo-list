@@ -52,6 +52,7 @@ function ModalModif(Props) {
             placeholder="Tâche a effectuer"
             value={nom}
             onChange={(e) => handleChangeNom(e)}
+            maxLength={52}
           />
         </span>
         <span className="flex justify-between pb-5">
