@@ -34,9 +34,9 @@ function EntreeListe(EntreeProps) {
 
 
   if (EntreeProps.index % 2 == 0) {
-    bgColor = "bg-white/[.6] backdrop-blur-lg";
+    bgColor = "bg-white/[.5] backdrop-blur-lg";
   } else {
-    bgColor = "bg-white/[.75] backdrop-blur-lg";
+    bgColor = "bg-white/[.7] backdrop-blur-lg";
   }
 
   if (fini === true) miseEnPageFini = "line-through";
